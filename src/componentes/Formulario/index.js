@@ -17,9 +17,15 @@ const Formulario = (props) => {
             cargo,
             imagem,
             equipe
-        })
-        // console.log('Form foi submetido => ', nome, cargo, imagem, equipe);
+        });
+        limpaForm();
     }
+    const limpaForm = () => {
+        setNome('');
+        setCargo('');
+        setImagem('');
+        setEquipe('');
+    };
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
